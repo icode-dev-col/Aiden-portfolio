@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>iCode Artisan Coffee</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- =========================
+       NAVBAR
+  ========================== -->
+  <header class="navbar">
+    <a href="index.html" class="logo-wrap">
+      <div class="logo-circle">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M17 8h1a4 4 0 1 1 0 8h-1" />
+          <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z" />
+          <line x1="6" x2="6" y1="2" y2="4" />
+          <line x1="10" x2="10" y1="2" y2="4" />
+          <line x1="14" x2="14" y1="2" y2="4" />
+        </svg>
+      </div>
+      <div>
+        <h1 class="brand-title">iCode Coffee Shop</h1>
+        <p class="brand-subtitle">Artisan Roasts</p>
+      </div>
+    </a>
+
+    <nav class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="order.html">Order</a>
+      <a href="customers.html">Customers</a>
+      <a href="login.html">Staff Login</a>
+    </nav>
+  </header>
+
+  <!-- =========================
+       HERO SECTION
+  ========================== -->
+  <div class="hero-wrapper">
+    <section class="hero-fancy">
+      <div class="hero-text">
+        <span class="hero-tag">Premium Specialty Coffee</span>
+        <h2>Awaken Your Senses, One Cup At A Time</h2>
+        <p>
+          Experience handcrafted artisan coffee roasted to absolute perfection.
+          A cozy digital storefront built with modern HTML, CSS, JavaScript, and PHP.
+        </p>
+
+        <div class="hero-buttons">
+          <a class="btn" href="order.html">Order Now</a>
+          <a class="btn btn-outline" href="customers.html">View Community</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-img-overlay"></div>
+        <img class="hero-img"
+          src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&q=80&w=1600"
+          alt="Beautiful latte art on a cozy wooden table">
+      </div>
+    </section>
+  </div>
+
+  <main class="container">
+
+    <!-- =========================
+         FEATURE CARDS
+    ========================== -->
+    <h2 class="section-title">The Digital Cafe Experience</h2>
+    <section class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 22h16" />
+            <path d="M10 2v4" />
+            <path d="M14 2v4" />
+            <path d="M6 10v2a8 8 0 0 0 16 0v-2" />
+            <path d="M22 10H2" />
+            <path d="M6 10V6h12v4" />
+            <path d="M6 10a8 8 0 0 0 12 0" />
+          </svg>
+        </div>
+        <h3>Place an Order</h3>
+        <p>
+          Fill out our seamless coffee order form. Choose your size, pick iced or hot,
+          and receive a digital receipt instantly.
+        </p>
+        <a class="card-link" href="order.html">Start Your Order</a>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+            <circle cx="9" cy="7" r="4" />
+            <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+          </svg>
+        </div>
+        <h3>Our Community</h3>
+        <p>
+          Browse our customer list. Find your friends and their favorite drinks
+          using our advanced PHP GET filtering system.
+        </p>
+        <a class="card-link" href="customers.html">Search Customers</a>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
+            <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+          </svg>
+        </div>
+        <h3>Staff Login</h3>
+        <p>
+          Access the backend. Log in via secure PHP sessions to manage orders and view the dashboard.
+        </p>
+        <a class="card-link" href="login.html">Access Panel</a>
+      </div>
+    </section>
+
+    <!-- =========================
+         DISCOUNT SECTION
+    ========================== -->
+    <section class="info-panel" style="margin-top: 60px; background: linear-gradient(135deg, #FFE9D8, #F7D5B8);">
+      <div class="info-text">
+        <h3>iCode Member Perks</h3>
+        <p style="margin-bottom: 24px; font-size: 18px;">Are you an iCode student or instructor? Enjoy exclusive
+          benefits on your artisan coffee!</p>
+        <ul class="pretty-list">
+          <li><b>Students:</b> 20% off any drink</li>
+          <li><b>Instructors:</b> Free size upgrade</li>
+        </ul>
+      </div>
+
+      <div class="info-badges" style="flex-direction: column; align-items: center;">
+        <div style="font-size: 64px; margin-bottom: 16px;">🎓</div>
+        <span class="skill-pill" style="border-color: var(--color-accent); color: var(--color-accent);">Show your iCode
+          ID at pickup</span>
+      </div>
+    </section>
+
+    <!-- =========================
+         MINI ABOUT / SKILLS SECTION
+    ========================== -->
+    <section class="info-panel">
+      <div class="info-text">
+        <h3>Crafted with Modern Tech</h3>
+        <ul class="pretty-list">
+          <li>Semantic <b>HTML5</b> structuring</li>
+          <li>Premium <b>CSS3</b> styling and micro-animations</li>
+          <li><b>JavaScript</b> logic for interactivity and forms</li>
+          <li>Frontend-only deployment (No server required)</li>
+        </ul>
+      </div>
+
+      <div class="info-badges">
+        <span class="skill-pill">HTML5</span>
+        <span class="skill-pill">Vanilla CSS</span>
+        <span class="skill-pill">JavaScript</span>
+        <span class="skill-pill">Mock Sessions</span>
+        <span class="skill-pill">Web UI Design</span>
+        <span class="skill-pill">Responsive Design</span>
+      </div>
+    </section>
+
+    <!-- =========================
+         CALL TO ACTION
+    ========================== -->
+    <section class="cta-banner">
+      <div class="cta-banner-text">
+        <h3>Ready for your perfect cup?</h3>
+        <p>Experience the finest roast mapped out in efficient code.</p>
+      </div>
+      <a class="btn btn-white" href="order.html">Order Your Drink</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 iCode Coffee Shop • Built for Students & Instructors</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

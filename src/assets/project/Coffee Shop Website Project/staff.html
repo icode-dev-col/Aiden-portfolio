@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Staff Area - iCode Artisan Coffee</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="index.html" class="logo-wrap">
+      <div class="logo-circle">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" x2="6" y1="2" y2="4"/><line x1="10" x2="10" y1="2" y2="4"/><line x1="14" x2="14" y1="2" y2="4"/></svg>
+      </div>
+      <div>
+        <h1 class="brand-title">iCode Coffee Shop</h1>
+        <p class="brand-subtitle">Artisan Roasts • iCode Exclusive</p>
+      </div>
+    </a>
+
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="order.html">Order</a>
+      <a href="customers.html">Customers</a>
+      <a href="staff.html" class="active">Staff Area</a>
+      <a href="#" id="logoutBtn">Log Out</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div id="authGuard" style="display: none; text-align: center; margin: 100px 0;">
+      <h2>Access Denied</h2>
+      <p>You must be logged in to view this page.</p>
+      <a href="login.html" class="btn" style="margin-top: 20px;">Go to Login</a>
+    </div>
+
+    <div id="staffContent" style="display: none;">
+      <div class="page-header">
+        <h2>✅ Welcome to the Secret Staff Page</h2>
+        <p>Secure Operations Dashboard</p>
+      </div>
+
+      <div class="info-panel" style="margin-top: 0;">
+        <div class="info-text">
+          <h3>Dashboard Overview</h3>
+          <p style="margin-bottom: 24px; font-size: 18px;">
+            Hello, <b id="staffNameDisplay">Staff</b>! 
+            <span style="background: rgba(26, 18, 11, 0.08); padding: 4px 10px; border-radius: 6px; font-size: 13px; font-weight: 600; margin-left: 8px;">Logged In</span>
+          </p>
+          <ul class="pretty-list">
+            <li>Check today’s artisan coffee orders</li>
+            <li>Restock premium coffee beans and dairy</li>
+            <li>Sanitize the espresso machine and counter</li>
+            <li>Update the community favorites board</li>
+          </ul>
+          
+          <div style="margin-top: 32px;">
+            <a class="btn" href="#" id="logoutBtnMain">Log Out Safely</a>
+          </div>
+        </div>
+        
+        <div class="info-badges">
+          <span class="skill-pill">Shift Active</span>
+          <span class="skill-pill">Inventory Checked</span>
+          <span class="skill-pill">System Secure</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 iCode Coffee Shop • Built for Students & Instructors</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

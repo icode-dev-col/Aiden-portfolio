@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Makes the site look good on phones/tablets -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>My Storybook Library</title>
+
+  <!-- Link the CSS file -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- =========================
+       TOP HEADER / NAV BAR
+       ========================= -->
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">📚</span>
+      <h1>My Storybook Library</h1>
+    </div>
+
+    <!-- This button appears only when we're inside the reader -->
+    <button id="backBtn" class="btn ghost hidden" aria-label="Go back to library">
+      ← Back to Library
+    </button>
+  </header>
+
+  <!-- =========================
+       MAIN CONTENT AREA
+       We'll toggle between:
+       1) Library view (grid of books)
+       2) Reader view (flipbook)
+       ========================= -->
+  <main class="container">
+
+    <!-- ========== LIBRARY VIEW ========== -->
+    <section id="libraryView">
+      <p class="subtitle">
+        Pick a book to start reading! Use arrow keys ⬅️➡️ to flip pages once you’re inside.
+      </p>
+
+      <!-- Where the JS will generate book cards -->
+      <div id="bookGrid" class="book-grid"></div>
+    </section>
+
+    <!-- ========== READER VIEW ========== -->
+    <section id="readerView" class="hidden">
+      <!-- Reader header: book title + page counter -->
+      <div class="reader-header">
+        <div>
+          <h2 id="bookTitle" class="reader-title">Book Title</h2>
+          <p id="bookAuthor" class="reader-author">by Someone</p>
+        </div>
+
+        <!-- Page number info -->
+        <div class="page-counter" aria-live="polite">
+          <span id="pageNumber">1</span> / <span id="totalPages">1</span>
+        </div>
+      </div>
+
+      <!-- The flipbook stage (the “screen” where pages appear) -->
+      <div class="stage">
+        <!-- The “book” container that holds the pages -->
+        <div id="flipbook" class="flipbook" aria-label="Storybook pages">
+
+          <!-- 
+            We will create pages dynamically in JS.
+            A page has:
+              - left side (previous page)
+              - right side (current page)
+            We animate the right side like a flipping sheet.
+          -->
+        </div>
+      </div>
+
+      <!-- Reader controls -->
+      <div class="controls">
+        <button id="prevBtn" class="btn" aria-label="Previous page">
+          ⬅️ Prev
+        </button>
+
+        <button id="randomBtn" class="btn ghost" aria-label="Random page">
+          🎲 Surprise Me
+        </button>
+
+        <button id="nextBtn" class="btn" aria-label="Next page">
+          Next ➡️
+        </button>
+      </div>
+
+      <!-- Tiny help text -->
+      <p class="hint">
+        Tip: You can also press ⬅️ / ➡️ on your keyboard.
+      </p>
+    </section>
+  </main>
+
+  <!-- Link the JS file at the bottom so HTML loads first -->
+  <script src="app.js"></script>
+</body>
+</html>

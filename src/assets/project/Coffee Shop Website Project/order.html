@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Order - iCode Artisan Coffee</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="index.html" class="logo-wrap">
+      <div class="logo-circle">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" x2="6" y1="2" y2="4"/><line x1="10" x2="10" y1="2" y2="4"/><line x1="14" x2="14" y1="2" y2="4"/></svg>
+      </div>
+      <div>
+        <h1 class="brand-title">iCode Coffee Shop</h1>
+        <p class="brand-subtitle">Artisan Roasts • iCode Exclusive</p>
+      </div>
+    </a>
+
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="order.html" class="active">Order</a>
+      <a href="customers.html">Customers</a>
+      <a href="login.html">Staff Login</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="page-header">
+      <h2>Place an Order</h2>
+      <p>Select your favorite artisan drink.</p>
+    </div>
+
+    <div class="form-container">
+      <div id="orderError" class="error" style="display: none; color: #D47A43; margin-bottom: 20px; font-weight: 600; text-align: center; background: #fff2eb; padding: 12px; border-radius: 8px;">Please fill in your name, drink, and size!</div>
+
+      <form id="orderForm">
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" id="orderName" placeholder="Mia" required />
+        </div>
+
+        <div class="form-group">
+          <label>Drink</label>
+          <input type="text" id="orderDrink" placeholder="Latte" required />
+        </div>
+
+        <div class="form-group">
+          <label>Size</label>
+          <select id="size" required>
+            <option value="">-- Choose size --</option>
+            <option value="Small">Small</option>
+            <option value="Medium">Medium</option>
+            <option value="Large">Large</option>
+          </select>
+        </div>
+
+        <div class="form-group" style="display: flex; align-items: center; gap: 10px;">
+          <input type="checkbox" id="iced" style="width: auto;" />
+          <label for="iced" style="margin:0; cursor:pointer;">Make it Iced?</label>
+        </div>
+
+        <div class="form-group">
+          <label>iCode ID (Optional for 20% discount)</label>
+          <input type="text" id="icodeId" placeholder="e.g. STU-1234 or INS-5678" />
+        </div>
+
+        <div class="form-group">
+          <label>Quantity</label>
+          <input type="number" id="qty" value="1" min="1" required />
+        </div>
+
+        <p id="totalPreview" style="text-align: center; color: var(--color-text-muted); font-size: 14px; margin-bottom: 20px;">Live Total Preview: Choose a size first</p>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-full">Place Order</button>
+        </div>
+      </form>
+
+      <div id="receiptCard" class="receipt" style="display: none; margin-top: 40px; padding: 30px; background: var(--color-cream); border-radius: var(--radius-sm); border: 2px dashed rgba(26, 18, 11, 0.1);">
+        <h3 style="margin-bottom: 20px; text-align: center;">Digital Receipt</h3>
+        <ul style="list-style:none; padding:0; line-height:2;">
+          <li><b>Customer:</b> <span id="rName"></span></li>
+          <li><b>Order:</b> <span id="rDrink"></span> (<span id="rSize"></span>) <span id="rIced"></span></li>
+          <li><b>Quantity:</b> <span id="rQty"></span></li>
+          <li><b>Price Each:</b> $<span id="rPrice"></span></li>
+          <li style="margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(26, 18, 11, 0.1); font-size: 18px; font-weight: 800; text-align: right;"><b>Total:</b> $<span id="rTotal"></span></li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 iCode Coffee Shop • Built for Students & Instructors</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

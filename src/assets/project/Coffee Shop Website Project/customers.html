@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Customers - iCode Artisan Coffee</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="index.html" class="logo-wrap">
+      <div class="logo-circle">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" x2="6" y1="2" y2="4"/><line x1="10" x2="10" y1="2" y2="4"/><line x1="14" x2="14" y1="2" y2="4"/></svg>
+      </div>
+      <div>
+        <h1 class="brand-title">iCode Coffee Shop</h1>
+        <p class="brand-subtitle">Artisan Roasts • iCode Exclusive</p>
+      </div>
+    </a>
+
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="order.html">Order</a>
+      <a href="customers.html" class="active">Customers</a>
+      <a href="login.html">Staff Login</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="page-header">
+      <h2>Customer Community</h2>
+      <p>Find your friends and their favorite drinks.</p>
+    </div>
+
+    <div class="form-container" style="max-width: 600px; margin-bottom: 20px;">
+      <form id="searchForm" style="display: flex; gap: 16px; align-items: flex-end;">
+        <div class="form-group" style="flex-grow: 1; margin-bottom: 0;">
+          <label>Search Directory</label>
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search by name or drink (e.g. mia, latte)"
+          />
+        </div>
+        <button type="submit" class="btn" style="padding: 14px 28px;">Search</button>
+      </form>
+    </div>
+
+    <div class="table-wrapper">
+      <div style="padding: 20px 24px; background: var(--color-cream); border-bottom: 1px solid rgba(26, 18, 11, 0.05);">
+        <p style="margin: 0; font-weight: 500;"><b>Filtering by:</b> <span id="filterLabel">All customers</span></p>
+      </div>
+      
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Customer Name</th>
+            <th>Favorite Drink</th>
+          </tr>
+        </thead>
+        <tbody id="customerTableBody">
+          <!-- Rows will be injected by JavaScript -->
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 iCode Coffee Shop • Built for Students & Instructors</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
